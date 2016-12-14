@@ -73,6 +73,16 @@ libraryDependencies += "com.typesafe" % "config" % "1.3.0"
 Code snippet to load configuration properties:
 val appConf = ConfigFactory.load()
 
+SBT File:-
+build.sbt
+
+name := "demo-spark-scala"
+version := "1.0"
+scalaVersion := "2.11.8"
+
+libraryDependencies += "org.apache.spark" % "spark-core_2.11" % "1.6.2"
+libraryDependencies += "com.typesafe" % "config" % "1.3.0"
+
 Improvised Word_Count:
 package wordcount
 
