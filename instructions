@@ -49,6 +49,11 @@ Add code in src/main/scala/……
 Right click on main project-> Run as-> Scala application and check output.
 To create jar file:-
 Project-> Export-> Java (jar) -> Select project and give destination-> Finish
+Additional Info:-
+There is scala plugin to load these parameter files (typesafe config)
+libraryDependencies += "com.typesafe" % "config" % "1.3.0"
+Code snippet to load configuration properties:
+val appConf = ConfigFactory.load()
 Integrate sbt with Scala IDE for Eclipse:
 Installing SBT:
 Install SBT.
