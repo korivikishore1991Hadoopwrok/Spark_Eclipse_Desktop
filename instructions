@@ -67,15 +67,39 @@ To complie for changes use sbt ~compile (or) delete all files except src, build.
 To run the program in sbt use sbt “run-main Main_object_name”
 Use sbt package command for creation of jar file.
 To run the application using jar file use sbt run jar_file_location Main_object_name
-Additional Info:-
-There is scala plugin to load these parameter files (typesafe config)
+
+Additional Info to externalize parameters using properties file:-
+There is scala plugin to load these parameter files (typesafe config look at https://github.com/typesafehub/config)
+maven:
+<dependency>
+    <groupId>com.typesafe</groupId>
+    <artifactId>config</artifactId>
+    <version>1.3.1</version>
+</dependency>
+sbt:
 libraryDependencies += "com.typesafe" % "config" % "1.3.0"
-Code snippet to load configuration properties:
+
+Code snippet to load configuration properties:-
 val appConf = ConfigFactory.load()
 
-Updation of argument should be done in RunConfigurations
-build.sbt:-
+Modifying project:
+After adding the typesafe dependencies, recomplie the project
+A directory called src/main/resources is created
+Create file application.properties
+Paste deployment Mode = local in application.properties
+In src/main/scala/wrodcount.object import com.typesafe.config._ and add val appConf = ConfigFactory.load()
+Modify setMaster(appConf.getString("deploymentMaster")) in Conf
+OR
+Can update application.properties to dev.deploymentMaster = local and then Modify setMaster(appConf.getConfig("dev").getString("deploymentMaster")) in Conf
 
+Passing Arguments:-
+Updation of argument should be done in RunConfigurations
+Intellij:
+Go to Run-> Edit Configuration-> Select Main class and Provide the arguments
+Eclipse:
+Go to Run->Select main class-> Provide arguments-> Run
+
+build.sbt:-
 name := "demo-spark-scala"
 version := "1.0"
 scalaVersion := "2.11.8"
@@ -93,7 +117,7 @@ import org.apache.hadoop.fs._
 
 object WordCount {
   def main(args: Array[String]) {
-    val appConf = ConfigFactory.load() //can also pass a path using ConfigFactory.load("path") look at https://github.com/typesafehub/config
+    val appConf = ConfigFactory.load() //can also pass a path using ConfigFactory.load("path") 
     val conf = new SparkConf().
       setAppName("Word Count").
       setMaster(appConf.getString("deploymentMaster"))
