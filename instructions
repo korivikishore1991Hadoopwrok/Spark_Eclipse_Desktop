@@ -73,8 +73,8 @@ libraryDependencies += "com.typesafe" % "config" % "1.3.0"
 Code snippet to load configuration properties:
 val appConf = ConfigFactory.load()
 
-SBT File:-
-build.sbt
+Updation of argument should be done in RunConfigurations
+build.sbt:-
 
 name := "demo-spark-scala"
 version := "1.0"
