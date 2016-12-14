@@ -93,7 +93,7 @@ import org.apache.hadoop.fs._
 
 object WordCount {
   def main(args: Array[String]) {
-    val appConf = ConfigFactory.load()
+    val appConf = ConfigFactory.load() //can also pass a path using ConfigFactory.load("path") look at https://github.com/typesafehub/config
     val conf = new SparkConf().
       setAppName("Word Count").
       setMaster(appConf.getString("deploymentMaster"))
