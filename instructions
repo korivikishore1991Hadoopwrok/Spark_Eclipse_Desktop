@@ -53,7 +53,7 @@ Integrate sbt with Scala IDE for Eclipse:
 Installing SBT:
 Install SBT.
 Go to C:\Users\Ranganadakishore\.sbt\0.13 folder in home directory and create directory named “plugins”
-Create a file plugin.sbt and add addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "4.0.0") to it.
+Create a file plugin.sbt and paste addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "4.0.0") to it.
 Building Project:
 Create a root directory for the project
 Mkdir –P /src/main/scala in root directory
