@@ -149,3 +149,7 @@ object WordCount {
 
   }
 }
+
+
+application properties file sample:
+deploymentMaster = local
