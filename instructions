@@ -10,7 +10,7 @@ Setup Spark in eclipse (Scala IDE) by building using Maven (http://www.devinline
 Setup Scala IDE for Eclipse and Integrate SBT with Scala IDE for Eclipse (http://www.itversity.com/topic/setup-scala-ide-for-eclipse/)
 
 Setting up of Spark on Desktop:
-Need to install scala before installing spark
+Need to install scala before installing spark and set SCALA_HOME to scala root directroy containing bin folder and append path to %SCALA_HOME%\bin
 They are two ways to install/run Spark on Windows
 One is running spark-shell in RPEL on windows through spark-shell (this is quick to set-up but tedious while developing)
 Other is running spark through IDE’s (It is tedious, but recommended to have IDE such Eclipse, IntelliJ etc...)
