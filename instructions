@@ -1,15 +1,15 @@
-_This Project covers:_
-**Setting up of Spark on Desktop.**
-**Running Spark-Shell in RPEL.**
-**Running Spark through IDE using both SBT and Maven (Specially using Eclipse IDE but also similar apply to Intellij IDE)**
-_Help is available in the following links:_
-**Help with setting spark and configuring it on Desktop:**
-Setup Spark on Windows – for development <http://www.itversity.com/2016/10/17/setup-spark-on-windows-for-development/>
-Configuring of log4j.properties in conf of spark folder <https://www.youtube.com/watch?v=4sO-VgqHLp4>
-Setup Spark in eclipse (Scala IDE) by building using Maven <http://www.devinline.com/2016/01/apache-spark-setup-in-eclipse-scala-ide.html>
-Setup Scala IDE for Eclipse and Integrate SBT with Scala IDE for Eclipse <http://www.itversity.com/topic/setup-scala-ide-for-eclipse/>
+_This Project covers:_  
+**Setting up of Spark on Desktop.**  
+**Running Spark-Shell in RPEL.**  
+**Running Spark through IDE using both SBT and Maven (Specially using Eclipse IDE but also similar apply to Intellij IDE)** 
+_Help is available in the following links:_  
+**Help with setting spark and configuring it on Desktop:**  
+Setup Spark on Windows – for development <http://www.itversity.com/2016/10/17/setup-spark-on-windows-for-development/>  
+Configuring of log4j.properties in conf of spark folder <https://www.youtube.com/watch?v=4sO-VgqHLp4>  
+Setup Spark in eclipse (Scala IDE) by building using Maven <http://www.devinline.com/2016/01/apache-spark-setup-in-eclipse-scala-ide.html>  
+Setup Scala IDE for Eclipse and Integrate SBT with Scala IDE for Eclipse <http://www.itversity.com/topic/setup-scala-ide-for-eclipse/>  
 
-# Setting up of Spark on Desktop:
+# Setting up of Spark on Desktop:  
 Need to install scala before installing spark and set SCALA_HOME to scala root directroy containing bin folder and append path to %SCALA_HOME%\bin
 They are two ways to install/run Spark on Windows
 One is running spark-shell in RPEL on windows through spark-shell (this is quick to set-up but tedious while developing)
