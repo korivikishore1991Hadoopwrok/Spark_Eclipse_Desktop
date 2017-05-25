@@ -27,6 +27,8 @@ Create SPARK_HOME Environment Variable pointing to the extracted folder.
 Validate Spark by running spark-shell (go to CMD C:\local_hadoop\spark-1.6.0-bin-hadoop2.6\bin and run spark-shell)  
 ## HDFS:  
 Download winutils.exe <https://github.com/steveloughran/winutils/raw/master/hadoop-2.6.0/bin/winutils.exe>  
+Configure SPARK_HOME to C:\local_hadoop\spark-1.6.0-bin-hadoop2.6 in System Environment Variables.  
+Add %SPARK_HOME%\bin to Path in user variables.  
 Create the following folders C:\local_hadoop\HDFS_Spark\bin and save winutils.exe to the previous path.  
 Set HADOOP_HOME to reflect the directory with an upper level to winutils i.e HADOOP_HOME = C:\local_hadoop\HDFS_Spark  
 Append PATH environment variable to include %HADOOP_HOME%\bin  
