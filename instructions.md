@@ -39,7 +39,9 @@ To test run run-example SparkPi 10 using CMD in the path C:\local_hadoop\spark-1
 Goto C:\local_hadoop\spark-1.6.0-bin-hadoop2.6\conf  
 Copy log4j.properties.template and paste in the same location and rename it to log4j.properties.  
 Change INFO to WARN i.e log4j.root category = INFO, console to log4j.root category = WARN, console  
-Setting this to WARN will reduce the log info we get on command line. In command line you can only see warnings and errors messages.  
+Setting this to WARN will reduce the log info we get on command line. In command line you can only see warnings and errors messages. 
+or  
+use "setLogLevel" method sparkContext.setLogLevel("ERROR")  
   
 # Running Spark through IDE:  
 **Preparing Eclipse IDE for Spark Scala project:**  
